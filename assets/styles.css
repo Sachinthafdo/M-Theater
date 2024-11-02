@@ -1,0 +1,591 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: #050014 !important;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem;
+}
+
+header nav {
+    /* background-color: #071c3fb9;
+    color: rgb(0, 0, 0); */
+    border: #ffffff;
+    border-radius: 3rem;
+    /* box-shadow: 0 2px 4px rgba(12, 28, 88, 0.785); */
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* header nav ul li {
+    margin: 0 2rem;
+} */
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo-text {
+    color: #ffffff;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+.btn-primary-nav {
+    background-color: #090028;
+    margin-left: 0.5rem;
+    margin-right:0.5rem;
+    color: rgb(255, 255, 255);
+    border: #ffffff;
+    width: 8rem;
+    font-size: 16px;
+    height: 1.8rem;
+    border-radius: 0.5rem;
+}
+
+.btn-book-now {
+    background-color: hwb(0 52% 7% / 0);
+    color: rgb(0, 0, 0);
+    border: #ffffff;
+    width: 8rem;
+    font-size: 16px;
+    height: 1.8rem;
+    border-radius: 3rem;
+}
+
+.btn-primary-nav:hover,
+.btn-book-now:hover {
+    transform: translateY(-2px);
+    background-color: #616bb8d5;
+    /* Move the button down slightly */
+    box-shadow: 0 3px 12px rgba(90, 107, 168, 0.384), 0 4px 8px rgba(12, 28, 88, 0.15);
+    /* 3D shadow effect */
+}
+
+.main-content {
+    flex: 1;
+}
+
+.signup,
+.booknow,
+.addmovie,
+.moviestable,
+.confirmation,
+.signin,
+.userstable {
+    padding: 2rem;
+    flex: 1;
+}
+
+.signin,
+.booknow,
+.addmovie,
+.moviestable,
+.confirmation,
+.signup,
+.userstable {
+    text-align: center;
+}
+
+.signin h1,
+.booknow h1,
+.addmovie h1,
+.moviestable h1,
+.confirmation h1,
+.signup h1,
+.userstable h1 {
+    margin-bottom: 1rem;
+}
+
+.signin form,
+.booknow form,
+.signup form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.signup-card,
+.booknow-card,
+.confirmation-card,
+.signin-card {
+    position: relative;
+    background-color: rgba(184, 219, 248, 0.651);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 350px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    width: 100%;
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+}
+
+
+.parallax {
+    /* background-image: url('theater-parallax.jpg');
+    height: 253px;  */
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-color: #080022;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 26px;
+    margin-bottom: 1rem;
+}
+
+.movies {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.showtimes,
+.about,
+.contact,
+.signin,
+.signup,
+.booknow,
+.addmovie,
+.moviestable,
+.confirmation,
+.userstable {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.card,
+.about .team-member {
+    background-color: rgba(255, 255, 255, 0.546);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    border-radius: 12px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img,
+.about .team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.card {
+    transition: transform .4s ease;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Optional hover effect for cards */
+.card:hover {
+    transform: scale(1.05);
+    /* Scale up slightly on hover */
+}
+
+.card p,
+.card h2 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.card button {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.movies-carousel {
+    justify-content: center;
+    align-items: center;
+}
+
+.movies-carousel h1 {
+    color: #ffffff;
+    padding-bottom: 0;
+}
+
+footer {
+    background-color: #050014;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    align-items: center;
+    justify-content: center;
+    /* Center the content */
+    gap: 4rem;
+    /* Add space between the elements */
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.contact form,
+.signin form,
+.signup form,
+.addmovie form,
+.booknow form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact form label,
+.signin form label,
+.signup form label,
+.addmovie form label,
+.booknow form label {
+    font-size: 12px;
+    margin: 0.5rem 0 0.25rem;
+    color: #071c3fb9;
+}
+
+.contact form input,
+.contact form textarea,
+.signin form input,
+.signup form input,
+.addmovie form input,
+.booknow form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.contact form button,
+.signin form button,
+.signup form button,
+.confirmation button,
+.booknow form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #071c3fb9;
+    color: white;
+    cursor: pointer;
+}
+
+.contact form button:hover,
+.booking-form form button:hover,
+.signin form button:hover,
+.signup form button:hover,
+.confirmation button:hover,
+.addmovie form button:hover,
+.booknow form button:hover {
+    background-color: #0b1d3d;
+}
+
+
+/* Style the select element */
+select {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    appearance: none;        /* Remove default browser appearance */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;   /* For Firefox */
+}
+
+/* Style the options */
+select option {
+    padding: 10px;
+    height: 2rem;
+    background-color: #fff;  /* Background color for options */
+    color: #333;             /* Text color for options */
+}
+
+
+
+
+.features ul,
+.comparison ul,
+.achievements ul,
+.why-special  ul{
+    list-style: none;
+    padding: 0;
+}
+
+.features li,
+.comparison li,
+.achievements li,
+.why-special li{
+    background-color: #e0e0e0;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 4px;
+}
+
+.features,
+.comparison,
+.achievements,
+.why-special,
+.admin-cards {
+    position: center;
+    background-color: rgba(255, 255, 255, 0.546);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    margin: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.admin {
+    display: flex;
+}
+
+.admin-actions {
+    flex: 1;
+    position: center;
+    background-color: rgba(255, 255, 255, 0.546);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    margin: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.admin-content-section {
+    display: none;
+}
+.admin-content-section.active {
+    display: block;
+}
+
+
+.addmovie form{
+    margin: 0 auto;
+}
+.addmovie-card,
+.moviestable-card  {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.852);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    width: 90%;
+}
+
+.addmovie form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #071c3fb9;
+    color: white;
+    cursor: pointer;
+}
+
+
+.movies-table  {
+    border-collapse: collapse;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.785);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.movies-table thead tr  {
+    background-color: #071c3fb9;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.movies-table th,
+.movies-table td  {
+    padding: 0.5rem;
+}
+
+.movies-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+.movies-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.movies-table td {
+    text-align: center;
+    font-size: 12px;
+}
+
+.movies-table th {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* General styles for input and textarea */
+.movies-table td input,
+.movies-table td textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid transparent; /* Transparent border */
+    font-size: 12px; /* Font size for input and textarea */
+    text-align: center;
+}
+
+/* Background color for inputs and textareas in even rows */
+.movies-table tbody tr:nth-of-type(even) td input,
+.movies-table tbody tr:nth-of-type(even) td textarea  {
+    background-color: #f3f3f3;
+}
+
+/* Background color for inputs and textareas in odd rows */
+.movies-table tbody tr:nth-of-type(odd) td input,
+.movies-table tbody tr:nth-of-type(odd) td textarea {
+    background-color: rgba(255, 255, 255, 0.852);
+}
+
+.movies-table tbody tr:hover td input,
+.movies-table tbody tr:hover td textarea{
+    background-color: #f1f1f1;
+}
+
+
+
+.profile-card, .bookings-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bookings-table th, .bookings-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.bookings-table th {
+    background-color: #f4f4f4;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin : 1rem;
+}
+.carousel-item {
+    margin : 0.45rem;
+    min-width: 20%; 
+    text-align: center;
+width: 250px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+.left-button {
+    left: 10px;
+}
+.right-button {
+    right: 10px;
+}
